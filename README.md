@@ -51,6 +51,26 @@ commands:
     description: Stops the server and the AutoPlug-Client. (Shortcut)
     usage: /.stb
     permission: autoplug.plugin.stopboth
+
+  .kill:
+    description: Kills the server.
+    usage: /.kill
+    permission: autoplug.plugin.kill
+
+  .k:
+    description: Kills the server. (Shortcut)
+    usage: /.k
+    permission: autoplug.plugin.kill
+    
+  .kill both:
+    description: Kills the server and the AutoPlug-Client.
+    usage: /.kill both
+    permission: autoplug.plugin.killboth
+
+  .kb:
+    description: Kills the server and the AutoPlug-Client. (Shortcut)
+    usage: /.kb
+    permission: autoplug.plugin.killboth
 ```
 
 ## AutoPlug-Plugin | Contribute

@@ -48,8 +48,30 @@ public class Commands {
         Constants.sendMsg(player, "Stopping the server and the AutoPlug-Client...");
         AutoPlugClientConnection.send(".stop both");
     }
+    
     public static void stopBoth(CommandSender player) {
         Constants.sendMsg(player, "Stopping the server and the AutoPlug-Client...");
         AutoPlugClientConnection.send(".stop both");
+    }
+
+    public static void kill(CommandSender player) {
+        Constants.sendMsg(player, "Killing the server...");
+        AutoPlugClientConnection.send(".kill");
+    }
+
+    
+    public static void kill(Player player) {
+        Constants.sendMsg(player, "Killing the server...");
+        AutoPlugClientConnection.send(".kill");
+    }
+    
+    public static void killBoth(Player player) {
+        Constants.sendMsg(player, "Killing the server and the AutoPlug-Client...");
+        AutoPlugClientConnection.send(".kill both");
+    }
+
+    public static void killBoth(CommandSender player) {
+        Constants.sendMsg(player, "Killing the server and the AutoPlug-Client...");
+        AutoPlugClientConnection.send(".kill both");
     }
 }
