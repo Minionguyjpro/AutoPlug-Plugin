@@ -49,11 +49,24 @@ public class AutoPlugCommandsGUI implements InventoryProvider {
         itemStop.setLore(Arrays.asList("Stops the server."));
         stop.setItemMeta(itemStop);
 
-        ItemStack stopBoth = new ItemStack(Material.BLACK_WOOL);
-        ItemMeta itemStopBoth = Bukkit.getItemFactory().getItemMeta(Material.BLACK_WOOL);
+        ItemStack stopBoth = new ItemStack(Material.ORANGE_WOOL);
+        ItemMeta itemStopBoth = Bukkit.getItemFactory().getItemMeta(Material.ORANGE_WOOL);
         itemStopBoth.setDisplayName(".stop both");
         itemStopBoth.setLore(Arrays.asList("Stops the server and the AutoPlug-Client."));
         stopBoth.setItemMeta(itemStopBoth);
+
+        
+        ItemStack kill = new ItemStack(Material.GRAY_WOOL);
+        ItemMeta itemKill = Bukkit.getItemFactory().getItemMeta(Material.GRAY_WOOL);
+        itemKill.setDisplayName(".kill");
+        itemKill.setLore(Arrays.asList("Kills the server."));
+        kill.setItemMeta(itemKill);
+
+        ItemStack killBoth = new ItemStack(Material.BLACK_WOOL);
+        ItemMeta itemKillBoth = Bukkit.getItemFactory().getItemMeta(Material.BLACK_WOOL);
+        itemKillBoth.setDisplayName(".kill both");
+        itemKillBoth.setLore(Arrays.asList("Kills the server and the AutoPlug-Client."));
+        killBoth.setItemMeta(itemKillBoth);
 
         contents.set(1, 1, ClickableItem.of(restart,
                 e -> {
@@ -71,6 +84,18 @@ public class AutoPlugCommandsGUI implements InventoryProvider {
                 e -> {
                     player.closeInventory();
                     Commands.stopBoth(player);
+                }));
+
+        contents.set(1, 4, ClickableItem.of(kill,
+                e -> {
+                    player.closeInventory();
+                    Commands.kill(player);
+                }));
+        
+        contents.set(1, 5, ClickableItem.of(killBoth,
+                e -> {
+                    player.closeInventory();
+                    Commands.killBoth(player);
                 }));
     }
 
