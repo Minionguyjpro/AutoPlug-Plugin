@@ -8,9 +8,12 @@ version '1.2'
 description = """Enables execution of AutoPlug-Client commands from in-game."""
 
 java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(16)
-    }
+    sourceCompatibility = JavaVersion.VERSION_1_16
+    targetCompatibility = JavaVersion.VERSION_1_16
+}
+
+shadowJar {
+    archiveFileName = 'AutoPlug-Plugin.jar'
 }
 
 repositories {
